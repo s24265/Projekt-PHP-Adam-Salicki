@@ -46,8 +46,8 @@
 </div>
 <div class="boxStyle">
     <article>
-        <img src="us1.png" alt="News 2 img" width="550" height="350"></article>
-        <p2>Najdroższa benzyna w historii USA. Niższe ceny mało prawdopodobne <a href="news2.php">czytaj więcej</a></p2>
+        <img src="us1.png" alt="News 2 img" width="550" height="350">
+        <br><p2>Najdroższa benzyna w historii USA. Niższe ceny mało prawdopodobne <a href="news2.php">czytaj więcej</a></p2>
     </article>
 </div>
 <div class="boxStyle">
