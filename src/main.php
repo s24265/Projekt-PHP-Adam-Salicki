@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
@@ -32,6 +35,13 @@
     body {
         background-color: #f1f1f1;
     }
+    .hiddenText {
+        display: none;
+    }
+
+    .hoverText:hover + .hiddenText {
+        display: block;
+    }
 </style>
 <div class="headerStyle"
 <header>
@@ -56,5 +66,20 @@
         <br><p2>W tych sklepach Polacy robią zakupy. Raport analityków <a href="news3.php">czytaj więcej</a></p2>
     </article>
 </div>
-<footer><p2>🔥GIGA NEWS 2022🔥</p2></footer>
+<footer><p2>GIGA NEWS 2022 🔥</p2></footer>
+<?php
+function adresIP() {
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        return $_SERVER['HTTP_CLIENT_IP'];
+    }
+    else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        return $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    else {
+        return $_SERVER['REMOTE_ADDR'];
+    }
+}
+$ipUzytkownika = adresIP();
+echo '<br><div class="hoverText"><p2>Twój adres IP: </p2></div>'.'<div class="hiddenText"><p2>'.$ipUzytkownika.'</p2></div><br>';
+?>
 </html>
