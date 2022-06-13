@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GIGA NEWS - McDonals's</title>
+    <title>GIGA NEWS - McDonalds's</title>
     <link rel="icon" type="image/png" href="gigaNewsyIcon.png">
 </head>
 <style>
@@ -16,22 +16,22 @@ session_start();
     }
     h1 {
         color: white;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 45px;
     }
     h2 {
         color: black;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 30px;
     }
     p2 {
         color: #000000;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 25px;
     }
     p3 {
         color: #000000;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 15px;
     }
     .boxStyle2 {

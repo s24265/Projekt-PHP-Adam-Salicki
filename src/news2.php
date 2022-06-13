@@ -16,22 +16,22 @@ session_start();
     }
     h1 {
         color: white;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 45px;
     }
     h2 {
         color: black;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 30px;
     }
     p2 {
         color: #000000;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 25px;
     }
     p3 {
         color: #000000;
-        font-family: Bahnschrift, serif;
+        font-family: Helvetica, serif;
         font-size: 15px;
     }
     .boxStyle2 {
