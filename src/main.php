@@ -38,7 +38,6 @@ session_start();
     .hiddenText {
         display: none;
     }
-
     .hoverText:hover + .hiddenText {
         display: block;
     }
@@ -80,6 +79,6 @@ function adresIP() {
     }
 }
 $ipUzytkownika = adresIP();
-echo '<br><div class="hoverText"><p2>Twój adres IP: </p2></div>'.'<div class="hiddenText"><p2>'.$ipUzytkownika.'</p2></div><br>';
+echo '<div class="hoverText"><p2>Twój adres IP: </p2></div>'.'<div class="hiddenText"><p2>'.$ipUzytkownika.'</p2></div><br>';
 ?>
 </html>
