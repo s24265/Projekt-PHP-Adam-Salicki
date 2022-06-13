@@ -1,53 +1,17 @@
 <!DOCTYPE html>
-<?php
-session_start();
-?>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>GIGA NEWS</title>
     <link rel="icon" type="image/png" href="gigaNewsyIcon.png">
+    <link rel="stylesheet" href="style1.css">
 </head>
-<style>
-    .headerStyle {
-        border: 1px outset #000000;
-        background-color: #1a1919;
-        text-align: center;
-    }
-    h1 {
-        color: white;
-        font-family: Helvetica, serif;
-        font-size: 45px;
-    }
-    p2 {
-        color: #000000;
-        font-family: Helvetica, serif;
-        font-size: 25px;
-    }
-    .boxStyle {
-        background-color: #ffffff;
-        width: 55%;
-        border: 10px outset #1a1919;
-        padding: 10px;
-        margin: auto;
-        text-align: left;
-    }
-    body {
-        background-color: #f1f1f1;
-    }
-    .hiddenText {
-        display: none;
-    }
-    .hoverText:hover + .hiddenText {
-        display: block;
-    }
-</style>
-<div class="headerStyle"
+<div class="headerStyle">
 <header>
     <h1>GIGA NEWS</h1>
 </header>
 </div>
-<div class="boxStyle"
+<div class="boxStyle">
      <article>
          <img src="mc1.png" alt="News 1 img" width="550" height="350">
          <br><p2>Rosjanie otworzyli swój McDonald's. Wygląda bardzo podobnie <a href="news1.php">czytaj więcej</a></p2>

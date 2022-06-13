@@ -1,51 +1,12 @@
 <!DOCTYPE html>
-<?php
-session_start();
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>GIGA NEWS - McDonalds's</title>
     <link rel="icon" type="image/png" href="gigaNewsyIcon.png">
+    <link rel="stylesheet" href="style1.css">
 </head>
-<style>
-    .headerStyle {
-        border: 1px outset #000000;
-        background-color: #1a1919;
-        text-align: center;
-    }
-    h1 {
-        color: white;
-        font-family: Helvetica, serif;
-        font-size: 45px;
-    }
-    h2 {
-        color: black;
-        font-family: Helvetica, serif;
-        font-size: 30px;
-    }
-    p2 {
-        color: #000000;
-        font-family: Helvetica, serif;
-        font-size: 25px;
-    }
-    p3 {
-        color: #000000;
-        font-family: Helvetica, serif;
-        font-size: 15px;
-    }
-    .boxStyle2 {
-        background-color: #ffffff;
-        border: 1px outset #1a1919;
-        padding: 10px;
-        margin: auto;
-        text-align: left;
-    }
-    body {
-        background-color: #f1f1f1;
-    }
-</style>
-<div class="headerStyle"
+<div class="headerStyle">
 <header>
     <h1>GIGA NEWS</h1>
 </header>
