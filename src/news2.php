@@ -13,12 +13,31 @@
 </div>
 <div class="boxStyle2">
     <article>
-        <h2>Najdroższa benzyna w historii USA. Niższe ceny mało prawdopodobne</h2>
-        <p3>Data utworzenia: 11 czerwca 2022, 16:20.</p3><br>
-        <br><p2>Średnia cena galona benzyny w USA po raz pierwszy w historii przekroczyła poziom 5 dol. – podało w sobotę American Automobile Association (AAA).
-            Ceny rosną niemal nieprzerwanie od ponad miesiąca. Jak podaje CNN, sobota jest 15. kolejnym dniem, w którym średnia cena galona (3,78 l) paliwa pobiła dotychczasowe rekordy.
-            Według Biura Statystyk Pracy (BLS), indeks cen benzyny wzrósł w ciągu ostatnich 12 miesięcy o niemal 50 proc., stanowiąc jeden z głównych czynników wpływających na najwyższą od ponad 40 lat inflację.
-        </p2><br>
+        <?php
+        $user = 'root';
+        $password = '';
+        $db = 'gigaDB';
+
+        $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
+        //tytul
+        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 2");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<h2>'.$result['tytul'].'</h2>';
+        }
+        //data
+        $query = $db -> query("SELECT data FROM newsdb WHERE zawartoscID = 2");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<p3>Data utworzenia: '.$result['data'].'</p3><br>';
+        }
+        //zawartosc
+        $query = $db -> query("SELECT zawartosc FROM newsdb WHERE zawartoscID = 2");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<br><p2>'.$result['zawartosc'].'</p2><br>';
+        }
+        ?>
         <br><p3>Grafiki:</p3>
         <br><img src="us1.png" alt="News 2 img" width="725" height="450"><br>
         <br><img src="us2.png" alt="News 2 img" width="725" height="450"><br>

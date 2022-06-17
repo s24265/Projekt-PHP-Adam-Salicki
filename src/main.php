@@ -14,19 +14,46 @@
 <div class="boxStyle">
      <article>
          <img src="mc1.png" alt="News 1 img" width="550" height="350">
-         <br><p2>Rosjanie otworzyli swój McDonald's. Wygląda bardzo podobnie <a href="news1.php">czytaj więcej</a></p2>
+         <?php
+         $user = 'root';
+         $password = '';
+         $db = 'gigaDB';
+
+         $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
+
+         $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 1");
+
+         if (mysqli_num_rows($query) == 0) { echo "no data"; }
+         while ($result = $query->fetch_array()) {
+             echo '<br><p2>'.$result['tytul'].'<a href="news1.php">czytaj więcej</a></p2>';
+         }
+         ?>
      </article>
 </div>
 <div class="boxStyle">
     <article>
         <img src="us1.png" alt="News 2 img" width="550" height="350">
-        <br><p2>Najdroższa benzyna w historii USA. Niższe ceny mało prawdopodobne <a href="news2.php">czytaj więcej</a></p2>
+        <?php
+        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 2");
+
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<br><p2>'.$result['tytul'].'<a href="news2.php">czytaj więcej</a></p2>';
+        }
+        ?>
     </article>
 </div>
 <div class="boxStyle">
     <article>
         <img src="be1.png" alt="News 3 img" width="550" height="350">
-        <br><p2>W tych sklepach Polacy robią zakupy. Raport analityków <a href="news3.php">czytaj więcej</a></p2>
+        <?php
+        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
+
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<br><p2>'.$result['tytul'].'<a href="news3.php">czytaj więcej</a></p2>';
+        }
+        ?>
     </article>
 </div>
 <footer><p2>GIGA NEWS 2022 🔥</p2></footer>

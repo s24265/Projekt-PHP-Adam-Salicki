@@ -13,15 +13,31 @@
 </div>
 <div class="boxStyle2">
     <article>
-        <h2>W tych sklepach Polacy robią zakupy. Raport analityków</h2>
-        <p3>Data utworzenia: 12 czerwca 2022, 10:00.</p3><br>
-        <br><p2>
-            Polacy coraz częściej robią zakupy, jednocześnie są wobec nich coraz mniej lojalni.
-            W czasach kryzysu wyszukują bowiem promocji. 91 proc. Polaków było w pierwszych osiemnastu tygodniach tego przynajmniej raz w sklepie sieci Biedronka – wynika z raportu firmy technologicznej Proxi.cloud.
-            Sklep Lidla odwiedziło w tym czasie ok. 60 proc. Polaków, Netto – 32 proc., a Aldi – 17 proc.
-            Autorzy raportu wskazali, że klienci częściej niż rok wcześniej robią zakupy w dyskontach. W zeszłym roku w tym samym okresie Biedronkę odwiedziło na przykład 89 proc.
-            – 28 proc. klientów dyskontowych odwiedza takie sklepy co najmniej raz w tygodniu. To oznacza wzrost o 7 punkty procentowe w porównaniu z analogicznym okresem zeszłego roku – podkreśla Mateusz Chołuj z Proxi.cloud. Z analizy wynika jednak, że klienci są coraz mniej lojalni wobec sklepów.
-        </p2><br>
+        <?php
+        $user = 'root';
+        $password = '';
+        $db = 'gigaDB';
+
+        $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
+        //tytul
+        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<h2>'.$result['tytul'].'</h2>';
+        }
+        //data
+        $query = $db -> query("SELECT data FROM newsdb WHERE zawartoscID = 3");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<p3>Data utworzenia: '.$result['data'].'</p3><br>';
+        }
+        //zawartosc
+        $query = $db -> query("SELECT zawartosc FROM newsdb WHERE zawartoscID = 3");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<br><p2>'.$result['zawartosc'].'</p2><br>';
+        }
+        ?>
         <br><p3>Grafiki:</p3>
         <br><img src="be1.png" alt="News 3 img" width="725" height="450"><br>
         <br><img src="be2.png" alt="News 3 img" width="725" height="450"><br>

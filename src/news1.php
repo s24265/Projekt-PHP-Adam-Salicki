@@ -13,17 +13,31 @@
 </div>
 <div class="boxStyle2">
     <article>
-        <h2>Rosjanie otworzyli swój McDonald's. Wygląda bardzo podobnie</h2>
-        <p3>Data utworzenia: 12 czerwca 2022, 14:14.</p3><br>
-        <br><p2>W Moskwie i obwodzie moskiewskim rozpoczęły w niedzielę działalność lokale krajowej sieci fastfoodów utworzone na bazie sieci restauracji McDonald's.
-            Po rosyjskiej inwazji na Ukrainę McDonald's w maju opuścił Rosję, gdzie działał przez ponad 30 lat.
-            Bary szybkiej obsługi nazywają się "Smacznie - i kropka" (ros. "Wkusno - i toczka").
-            W menu są frytki, burgery i napoje gazowane.
-            Opakowania są bardzo podobne do poprzednich, tyle że bez charakterystycznych kolorów i loga McDonald's. Asortyment może się zmienić z powodu wycofywania się zagranicznych dostawców z rynku rosyjskiego.
-            Na razie firma korzysta z zapasów coca-coli, ale będzie szukać zamiennika.
-            "Wzdłuż kolejki stoją pracownicy i rozdają baloniki.
-            Wokół - samochody policyjne, a otwarcie ochraniają funkcjonariusze dwóch specjalnych pułków policji, które wcześniej rozpędzały demonstracje" - relacjonuje niezależna "Nowaja Gazieta", której redakcja działa teraz poza Rosją.
-        </p2><br>
+        <?php
+        $user = 'root';
+        $password = '';
+        $db = 'gigaDB';
+
+        $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
+        //tytul
+        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 1");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<h2>'.$result['tytul'].'</h2>';
+        }
+        //data
+        $query = $db -> query("SELECT data FROM newsdb WHERE zawartoscID = 1");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<p3>Data utworzenia: '.$result['data'].'</p3><br>';
+        }
+        //zawartosc
+        $query = $db -> query("SELECT zawartosc FROM newsdb WHERE zawartoscID = 1");
+        if (mysqli_num_rows($query) == 0) { echo "no data"; }
+        while ($result = $query->fetch_array()) {
+            echo '<br><p2>'.$result['zawartosc'].'</p2><br>';
+        }
+        ?>
         <br><p3>Grafiki:</p3>
         <br><img src="mc1.png" alt="News 1 img" width="725" height="450"><br>
         <br><img src="mc2.png" alt="News 1 img" width="725" height="450"><br>
