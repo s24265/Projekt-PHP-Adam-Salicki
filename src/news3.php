@@ -16,7 +16,7 @@
         <?php
         $user = 'root';
         $password = '';
-        $db = 'gigaDB';
+        $db = 'giganewsDB';
 
         $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
         //tytul
