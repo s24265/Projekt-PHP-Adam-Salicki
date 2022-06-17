@@ -19,19 +19,16 @@
         $db = 'giganewsDB';
 
         $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
-        //tytul
         $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {
             echo '<h2>'.$result['tytul'].'</h2>';
         }
-        //data
         $query = $db -> query("SELECT data FROM newsdb WHERE zawartoscID = 3");
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {
             echo '<p3>Data utworzenia: '.$result['data'].'</p3><br>';
         }
-        //zawartosc
         $query = $db -> query("SELECT zawartosc FROM newsdb WHERE zawartoscID = 3");
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {
