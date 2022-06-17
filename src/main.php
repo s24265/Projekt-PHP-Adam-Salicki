@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GIGA NEWS</title>
-    <link rel="icon" type="image/png" href="gigaNewsyIcon.png">
+    <link rel="icon" type="image/png" href="icon/gigaNewsyIcon.png">
     <link rel="stylesheet" href="style1.css">
 </head>
 <div class="headerStyle">
@@ -13,7 +13,7 @@
 </div>
 <div class="boxStyle">
      <article>
-         <img src="mc1.png" alt="News 1 img" width="550" height="350">
+         <img src="imgs/mc1.png" alt="News 1 img" width="550" height="350">
          <?php
          $user = 'root';
          $password = '';
@@ -32,7 +32,7 @@
 </div>
 <div class="boxStyle">
     <article>
-        <img src="us1.png" alt="News 2 img" width="550" height="350">
+        <img src="imgs/us1.png" alt="News 2 img" width="550" height="350">
         <?php
         $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 2");
 
@@ -45,7 +45,7 @@
 </div>
 <div class="boxStyle">
     <article>
-        <img src="be1.png" alt="News 3 img" width="550" height="350">
+        <img src="imgs/be1.png" alt="News 3 img" width="550" height="350">
         <?php
         $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
 
