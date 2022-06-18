@@ -3,6 +3,9 @@
     background-color: #1a1919;
     text-align: center;
 }
+.tAlign {
+    text-align: right;
+}
 h1 {
     color: white;
     font-family: Helvetica, serif;

@@ -9,6 +9,9 @@
 <div class="headerStyle">
 <header>
     <h1>GIGA NEWS</h1>
+    <div class="tAlign">
+        <input type="button" name="Login" style="alignment: right; width: 100px; height: 30px; color: black; background-color: white" value="Login">
+    </div>
 </header>
 </div>
 <div class="boxStyle">
@@ -58,7 +61,7 @@
 </div>
 <footer><p2>GIGA NEWS 2022 🔥</p2></footer>
 <?php
-function adresIP() {
+function ipAddress() {
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         return $_SERVER['HTTP_CLIENT_IP'];
     }
@@ -69,7 +72,7 @@ function adresIP() {
         return $_SERVER['REMOTE_ADDR'];
     }
 }
-$ipUzytkownika = adresIP();
-echo '<div class="hoverText"><p2>Twój adres IP: </p2></div>'.'<div class="hiddenText"><p2>'.$ipUzytkownika.'</p2></div><br>';
+$ipUser = ipAddress();
+echo '<div class="hoverText"><p2>Twój adres IP: </p2></div>'.'<div class="hiddenText"><p2>'.$ipUser.'</p2></div><br>';
 ?>
 </html>
