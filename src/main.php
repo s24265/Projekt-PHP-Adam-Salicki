@@ -10,7 +10,7 @@
 <header>
     <h1>GIGA NEWS</h1>
     <div class="tAlign">
-        <input type="button" name="Login" style="alignment: right; width: 100px; height: 30px; color: black; background-color: white" value="Login">
+        <button type="button" name="Login" onclick="alert('not working')" style="alignment: right; width: 100px; height: 30px; color: black; background-color: white" value="Login">Login</button>
     </div>
 </header>
 </div>
@@ -18,6 +18,7 @@
      <article>
          <img src="imgs/mc1.png" alt="News 1 img" width="550" height="350">
          <?php
+
          $user = 'root';
          $password = '';
          $db = 'giganewsDB';
