@@ -1,4 +1,4 @@
-create table newsdb
+create table if not exists newsdb
 (
     zawartoscID int auto_increment
         primary key,
