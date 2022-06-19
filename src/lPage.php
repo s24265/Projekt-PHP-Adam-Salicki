@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="boxStyle"><p2>Logowanie</p2>
-        <form name="loginMethod" action = "lProcessingPage.php" onsubmit = "return validation()" method = "POST">
+        <form name="loginMethod" action = "lProcessingPage.php" method = "POST">
             <p><label for="user"></label><input type = "text" id ="user" name  = "user" placeholder="nazwa użytkownika" required/></p>
             <p><label for="password"></label><input type = "password" id ="password" name  = "password" placeholder="hasło" required/></p>
             <p><input type =  "submit" id = "login" value = "Login" /></p>
@@ -29,30 +29,7 @@
     $ipUser = ipAddress();
 
     echo '<div class="hoverText"><p3>Twój adres IP: </p3></div>'.'<div class="hiddenText"><p3>'.$ipUser.'</p3></div><br>';
-
-    function lValidation() {
-
-    }
 ?>
 </div>
-    <script>
-        function validation()
-        {
-            const id = document.loginMethod.user.value;
-            const ps = document.loginMethod.password.value;
-            if(id.length==="" && ps.length==="") {
-                return false;
-            }
-            else
-            {
-                if(id.length==="") {
-                    return false;
-                }
-                if (ps.length==="") {
-                    return false;
-                }
-            }
-        }
-    </script>
 </body>
 </html>
