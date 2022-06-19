@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>GIGA NEWS - Sklepy w PL</title>
     <link rel="icon" type="image/png" href="icon/gigaNewsyIcon.png">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="cssFiles/style1.css">
 </head>
 <div class="headerStyle">
 <header>
     <h1>GIGA NEWS</h1>
 </header>
 </div>
+<body>
 <div class="boxStyle2">
     <article>
         <?php
@@ -48,5 +49,6 @@
         ?>
     </article>
 </div>
+</body>
 <footer><p2>GIGA NEWS 2022 🔥</p2></footer>
 </html>

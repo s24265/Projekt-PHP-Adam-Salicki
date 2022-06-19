@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <title>GIGA NEWS</title>
     <link rel="icon" type="image/png" href="icon/gigaNewsyIcon.png">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="cssFiles/style1.css">
 </head>
 <div class="headerStyle">
 <header>
     <h1>GIGA NEWS</h1>
     <div class="tAlign">
-        <button type="button" name="Login" onclick="alert('not working')" style="alignment: right; width: 100px; height: 30px; color: black; background-color: white" value="Login">Login</button>
+        <button type="button" name="Login" onclick="location.href='lPage.php'" style="alignment: right; width: 100px; height: 30px; color: black; background-color: white" value="Login">Login</button>
     </div>
 </header>
 </div>
+<body>
 <div class="boxStyle">
      <article>
          <img src="imgs/mc1.png" alt="News 1 img" width="550" height="350">
          <?php
-
          $user = 'root';
          $password = '';
          $db = 'giganewsDB';
@@ -60,20 +60,6 @@
         ?>
     </article>
 </div>
+</body>
 <footer><p2>GIGA NEWS 2022 🔥</p2></footer>
-<?php
-function ipAddress() {
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-        return $_SERVER['HTTP_CLIENT_IP'];
-    }
-    else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        return $_SERVER['HTTP_X_FORWARDED_FOR'];
-    }
-    else {
-        return $_SERVER['REMOTE_ADDR'];
-    }
-}
-$ipUser = ipAddress();
-echo '<div class="hoverText"><p2>Twój adres IP: </p2></div>'.'<div class="hiddenText"><p2>'.$ipUser.'</p2></div><br>';
-?>
 </html>
