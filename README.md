@@ -3,3 +3,4 @@
 
 Do dodania:
 -edycja postów
+na macos hasło do to 'root'
