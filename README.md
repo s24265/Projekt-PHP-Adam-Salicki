@@ -3,4 +3,3 @@
 
 Do dodania:
 -edycja postów
--logowanie użytkowników
