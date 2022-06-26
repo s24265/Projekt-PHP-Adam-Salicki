@@ -9,9 +9,9 @@
 <body>
 <div class="boxStyle"><p2>Logowanie</p2>
         <form name="loginMethod" action = "lProcessingPage.php" method = "POST">
-            <p><label for="user"></label><input type = "text" id ="user" name  = "user" placeholder="nazwa użytkownika" required/></p>
-            <p><label for="password"></label><input type = "password" id ="password" name  = "password" placeholder="hasło" required/></p>
-            <p><input type =  "submit" id = "login" value = "Login" /></p>
+            <p2><label for="user"></label><input type = "text" id ="user" name  = "user" placeholder="nazwa użytkownika" required/></p2><br>
+            <p2><label for="password"></label><input type = "password" id ="password" name  = "password" placeholder="hasło" required/></p2><br>
+            <p2><input type =  "submit" id = "login" value = "Login" /></p2>
         </form>
     <?php
     function ipAddress() {
@@ -28,7 +28,7 @@
     }
     $ipUser = ipAddress();
 
-    echo '<div class="hoverText"><p3>Twój adres IP: </p3></div>'.'<div class="hiddenText"><p3>'.$ipUser.'</p3></div><br>';
+    echo '<div class="hoverText"><br><p3>Twój adres IP: </p3></div>'.'<div class="hiddenText"><p3>'.$ipUser.'</p3></div><br>';
 ?>
 </div>
 </body>
