@@ -15,18 +15,18 @@
 <div class="boxStyle2">
     <article>
         <?php
-        $db = new mysqli('localhost', 'root', 'root', 'giganewsDB') or die("not connected");
-        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
+        $con = new mysqli('localhost', 'root', 'root', 'giganewsDB') or die("not connected");
+        $query = $con -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {
             echo '<h2>'.$result['tytul'].'</h2>';
         }
-        $query = $db -> query("SELECT data FROM newsdb WHERE zawartoscID = 3");
+        $query = $con -> query("SELECT data FROM newsdb WHERE zawartoscID = 3");
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {
             echo '<p3>Data utworzenia: '.$result['data'].'</p3><br>';
         }
-        $query = $db -> query("SELECT zawartosc FROM newsdb WHERE zawartoscID = 3");
+        $query = $con -> query("SELECT zawartosc FROM newsdb WHERE zawartoscID = 3");
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {
             echo '<br><p2>'.$result['zawartosc'].'</p2><br>';

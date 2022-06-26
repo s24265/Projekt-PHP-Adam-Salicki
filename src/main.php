@@ -19,10 +19,9 @@
      <article>
          <img src="imgs/mc1.png" alt="News 1 img" width="550" height="350">
          <?php
+         $con = new mysqli('localhost', 'root', 'root', 'giganewsDB') or die("not connected");
 
-         $db = new mysqli('localhost', 'root', 'root', 'giganewsDB') or die("not connected");
-
-         $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 1");
+         $query = $con -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 1");
 
          if (mysqli_num_rows($query) == 0) { echo "no data"; }
          while ($result = $query->fetch_array()) {
@@ -35,7 +34,7 @@
     <article>
         <img src="imgs/us1.png" alt="News 2 img" width="550" height="350">
         <?php
-        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 2");
+        $query = $con -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 2");
 
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {
@@ -48,7 +47,7 @@
     <article>
         <img src="imgs/be1.png" alt="News 3 img" width="550" height="350">
         <?php
-        $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
+        $query = $con -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
 
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {

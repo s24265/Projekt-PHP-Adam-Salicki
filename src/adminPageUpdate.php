@@ -3,8 +3,7 @@ session_start();
 
 $con = mysqli_connect('localhost', 'root', 'root', 'giganewsDB');
 
-if(isset($_POST['newsUpdate']))
-{
+if(isset($_POST['newsUpdate'])) {
     $id = $_POST['zawartoscID'];
     $tytul = $_POST['tytul'];
     $data = $_POST['data'];

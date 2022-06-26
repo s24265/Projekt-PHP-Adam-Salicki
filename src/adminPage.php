@@ -28,7 +28,7 @@ session_start();
         </label>
         <p3><label for="">Data newsa:</label></p3>
         <label>
-            <p2><input type="text" name="data" class="form-control" placeholder="data"></p2><br>
+            <p2><input type="text" name="data" class="form-control" placeholder="RRRR-MM-DD"></p2><br>
         </label>
         <p3><label for="">Treść newsa:</label></p3>
         <label>
