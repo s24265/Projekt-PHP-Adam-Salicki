@@ -19,11 +19,8 @@
      <article>
          <img src="imgs/mc1.png" alt="News 1 img" width="550" height="350">
          <?php
-         $user = 'root';
-         $password = '';
-         $db = 'giganewsDB';
 
-         $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
+         $db = new mysqli('localhost', 'root', 'root', 'giganewsDB') or die("not connected");
 
          $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 1");
 

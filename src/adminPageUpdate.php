@@ -1,16 +1,16 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost","root","","giganewsDB");
+
+$con = mysqli_connect('localhost', 'root', 'root', 'giganewsDB');
 
 if(isset($_POST['newsUpdate']))
 {
     $id = $_POST['zawartoscID'];
+    $tytul = $_POST['tytul'];
+    $data = $_POST['data'];
+    $zawartosc = $_POST['zawartosc'];
 
-    $name = $_POST['tytul'];
-    $class = $_POST['data'];
-    $phone = $_POST['zawartosc'];
-
-    $query = "UPDATE newsdb SET tytul='$name', data='$class', zawartosc='$phone' WHERE zawartoscID='$id' ";
+    $query = "UPDATE newsdb SET tytul='$tytul', data='$data', zawartosc='$zawartosc' WHERE zawartoscID='$id' ";
     $query_run = mysqli_query($con, $query);
 
     if($query_run) {

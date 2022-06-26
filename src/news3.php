@@ -15,11 +15,7 @@
 <div class="boxStyle2">
     <article>
         <?php
-        $user = 'root';
-        $password = '';
-        $db = 'giganewsDB';
-
-        $db = new mysqli('localhost', $user, $password, $db) or die("not connected");
+        $db = new mysqli('localhost', 'root', 'root', 'giganewsDB') or die("not connected");
         $query = $db -> query("SELECT tytul FROM newsdb WHERE zawartoscID = 3");
         if (mysqli_num_rows($query) == 0) { echo "no data"; }
         while ($result = $query->fetch_array()) {

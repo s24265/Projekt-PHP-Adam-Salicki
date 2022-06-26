@@ -1,10 +1,5 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = '';
-$db_name = "giganewsDB";
-
-$con = mysqli_connect($host, $user, $password, $db_name);
+$con = mysqli_connect('localhost', 'root', 'root', 'giganewsDB');
 if(mysqli_connect_errno()) {
     die("Failed to connect". mysqli_connect_error());
 }
